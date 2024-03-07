@@ -14,7 +14,8 @@ main()
       for(j=1;j<=10;j++)
       {
           x=i*j;
-          print(x);
+          print("$i*$j =$x");
       }
+    print("")
   }
 }
