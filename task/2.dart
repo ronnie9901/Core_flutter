@@ -1,34 +1,21 @@
 import 'dart:io';
 
-void main() 
-{
-  List uni = [];
-  int n,i,j,
-    
+void main() {
+  List uni= [];
+  int n;
+  String num;
 
   stdout.write("Enter the number : ");
   n = int.parse(stdin.readLineSync()!);
 
-  for (int i = 0; i < n; i++)
-   {
-    stdout.write("Enter value of Element[$i] : ");
-    int x =int.parse( stdin.readLineSync()!);
-    uni.add(x);
+  for (int i = 0; i < n; i++) 
+  {
+    stdout.write("Enter value of [$i] : ");
+    num = stdin.readLineSync()!;
+    uni.add(num);
   }
 
-   for(i=0;i<uni.length;i++)
-   {
-        for(j=0;j<uni.length;i++)
-        {
-             if(uni[i]==uni[j])
-             {
-                 uni.remove(uni[i]);
-             }
-        }
-        if(uni[i]!=0)
-        {
-             print(uni);
-        }
-   }
-
+  List check = Set.of(uni).toList();
+  print(check);
+  
 }
