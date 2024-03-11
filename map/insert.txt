@@ -1,0 +1,10 @@
+
+  void main() {
+    List name = ["Jaynesh", "A", "B", "C"];
+  
+    print(name[0]);
+  
+    name.addAll(['Akhil', 40, 90]);
+  
+    print(name);
+}
