@@ -1,72 +1,75 @@
-// 15.Wap to Insert, Delete & Update operations the element into array.
-
 import 'dart:io';
-void main()
-{
-  int n,i,num,choice;
-  int pos,elem;
-  List<int> arr = [];
 
-  stdout.write("Enter ths Size of an array : ");
+void main() 
+{
+   List a = [];
+   int n;
+   int x,Element,posi;
+
+  stdout.write("Enter the number : ");
   n = int.parse(stdin.readLineSync()!);
 
-  stdout.write("\nEnter the Elements of an Array\n");
-  for(i=0; i<n; i++)
+  for (int i = 0; i < n; i++) 
   {
-    stdout.write("Enter a arr[$i] : ");
-    num = int.parse(stdin.readLineSync()!);
-    arr.add(num);
+    stdout.write("Enter value of Element[$i] : ");
+    int x=int.parse(stdin.readLineSync()!);
+    a.add(x);
   }
+   stdout.write(" enter choise :");
+   int choise =int.parse(stdin.readLineSync()!);
 
-  do
-  {
-    stdout.write("\n=====================\n");
-    stdout.write("For Insert press 1\n");
-    stdout.write("For Delet press 2\n");
-    stdout.write("For Update press 3\n");
-    stdout.write("For View All press 4\n");
-    stdout.write("For Exit press 0\n");
-    choice = int.parse(stdin.readLineSync()!);
+   print(" enter insert value");
+   print("enter ubdate value ");
+   print(" enter delete value");
 
-    switch(choice)
+
+    switch(choise)
     {
-      case 1 :
-        stdout.write("Enter a Position : ");
-        pos = int.parse(stdin.readLineSync()!);
+      case 1:
+      {
+      stdout.write(" enter element :");
+      int Element=int.parse(stdin.readLineSync()!);
 
-        stdout.write("Enter a Element : ");
-        elem = int.parse(stdin.readLineSync()!);
+      stdout.write(" enter posi :");
+      int posi =int.parse(stdin.readLineSync()!);
 
-        arr.insert(pos,elem);
-        break;
+       a.insert(posi, Element);
+       print(a);
 
-      case 2 :
-        stdout.write("Enter a Position : ");
-        pos = int.parse(stdin.readLineSync()!);
+      }
+      break;
+      case 2:
+      {
+      
+       stdout.write(" enter element :");
+      int Element=int.parse(stdin.readLineSync()!);
 
-        arr.removeAt(pos);
-        break;
+      stdout.write(" enter posi :");
+      int posi =int.parse(stdin.readLineSync()!);
 
-      case 3 :
-        stdout.write("Enter a Position : ");
-        pos = int.parse(stdin.readLineSync()!);
+         a.removeAt(posi);
+         print(a);
+      }
+      break;
+    
+      case 3:
+      {
+        stdout.write(" enter element :");
+        int Element=int.parse(stdin.readLineSync()!);
 
-        stdout.write("Enter a Element : ");
-        elem = int.parse(stdin.readLineSync()!);
+        stdout.write(" enter posi :");
+        int posi =int.parse(stdin.readLineSync()!);
 
-        arr.removeAt(pos);
-        arr.insert(pos,elem);
-        break;
+         a[posi]=Element;
+         print(a);
+      }
 
-      case 4 : 
-        stdout.write("\nArray is Below...\n");
-        print(arr);
-        break;
 
-      default :
-        stdout.write("Enter valid Input!!\n");
+
+
+    
     }
 
-  }while(choice != 0);
-
 }
+     
+     
