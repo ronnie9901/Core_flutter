@@ -2,42 +2,33 @@ import "dart:io";
 
 void main()
 {
- 
-
-  stdout.write(" enter size of array :");
-  var n =stdin.readLineSync()!;
-  int i,j;
+  int i,j,f=1;
   List a =[]; 
+  String str;
+
+  stdout.write(" enter String :");
+  str =stdin.readLineSync()!;
+
+  for(i=0; i<str.length; i++)
+  {
+    a.add(str[i]);
+  }
     
-  for(i=0;i<n.length;i++)
+  for(i=0;i<str.length;i++)
   {
-     for(j=0;j<n.length;j++)
+     for(j=i+1;j<str.length;j++)
     {
-
-      stdout.write(" enter the x :");
-    int  x = int.parse(stdin.readLineSync()!);
-
-    a.add(x);
-  }
-     
-      
-  }
-  int ch=1;
-
-  
-  for(i=0;i<n.length;i++)
-  {
-       for(j=0;j<n.length;j++)
-       {
-            ch++;
-            a[j]=0;
-       } 
-     
-  }
-  if(a[i]!=0)
-  {
-       stdout.write(" ${a[i]}");
-       print(ch);
+      if(a[i] == a[j])
+      {
+        f++;
+        a[j] = 0;
+      }
+    }
+    if(a[i] != 0)
+    {
+      print("${a[i]} --> $f\n");
+    }
+     f=1;
   }
   
  
