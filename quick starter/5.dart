@@ -44,17 +44,22 @@ void main() {
 
         break;
 
-      case 2:
+        case 2:
         Sum_of_row(arr, l);
 
         break;
 
-      case 2:
+        case 3:
         Sum_of_colum(arr, l);
 
         break;
-      case 2:
+        case 4:
         diagonal(arr, l);
+
+        case 5:
+        SumofAnitDiagonalElem(arr, l);
+        break;
+       ;
 
         break;
       default:
@@ -115,7 +120,7 @@ void diagonal(List arr, int l) {
   stdout.write("\nSum of diagonal: $sum");
 }
 
-void SumofAnitDiagonalElem(List arr, int length) {
+void SumofAnitDiagonalElem(List arr, int l) {
   int sum = 0, temp, rows = 3;
   for (int i = 0; i < arr.length; i++) {
     for (int j = 0; j < arr.length; j++) {
