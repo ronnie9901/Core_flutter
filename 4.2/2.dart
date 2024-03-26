@@ -94,21 +94,26 @@ class Railways
              train[i].get();
          }
          case 3:
+          
+             stdout.write(" add the train number");
+             int no=int.parse(stdin.readLineSync()!);
 
-           int check=0;
-           if(train[i].TrainName==n)
+           bool check =false;
+           for(i=0;i<train.length;i++)
            {
-                for(i=0;i<train.length;i++)
-              {
-                check=1;
-                train[i].get();
-             
-             }
-             if(check!=1)
-             {
-                 print(" train is not found\n");
-             }
+             if(train[i].TrainNumber==no)
+             {  
+                 train[i].get();
+                 check =true;
+               
+            
+              }
            }
+               
+             if(check!=true)
+             {
+                 print(" its not available \n");
+             }
            break;
 
            case 4:
